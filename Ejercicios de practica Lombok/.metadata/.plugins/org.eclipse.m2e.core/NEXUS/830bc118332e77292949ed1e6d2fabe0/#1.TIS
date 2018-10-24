@@ -1,0 +1,16 @@
+import Popper, { Data, Modifiers, PopperOptions } from 'popper.js';
+
+
+const modifiers: Modifiers = {
+  shift: {},
+  offset: {
+    order: 0,
+    offset: 'a string offset'
+  },
+  preventOverflow: {},
+  keepTogether: {
+    enabled: true
+  },
+  arrow: {
+    fn(data, options) {
+      return { ...data, f

@@ -1,0 +1,5 @@
+import getStyleComputedProperty from './getStyleComputedProperty';
+import getParentNode from './getParentNode';
+
+/**
+ * Check if the giv

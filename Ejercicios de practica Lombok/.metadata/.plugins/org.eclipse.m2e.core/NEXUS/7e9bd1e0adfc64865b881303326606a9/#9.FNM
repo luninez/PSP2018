@@ -1,0 +1,10 @@
+checks:
+  file-lines:
+    enabled: false
+  method-complexity:
+    enabled: false
+engines:
+  duplication:
+    enabled: false
+  eslint:
+    e

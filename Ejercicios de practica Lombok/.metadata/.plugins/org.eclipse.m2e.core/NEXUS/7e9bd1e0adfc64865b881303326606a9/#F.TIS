@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" com.springsource.tcserver.asf="false" com.springsource.tcserver.name="base-instance" com.springsource.tcserver.version="9.0.7.B.RELEASE" configuration-id="/Servers/Pivotal tc Server Developer Edition v4.0-config" deployDir="wtpwebapps" hostname="localhost" id="Pivotal tc Server D
