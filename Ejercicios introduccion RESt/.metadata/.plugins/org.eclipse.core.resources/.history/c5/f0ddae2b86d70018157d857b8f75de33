@@ -1,0 +1,15 @@
+package com.lbenitez.rest.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.lbenitez.rest.clases.Greeting;
+
+@RestController
+public class GreetingController {
+
+    @RequestMapping("/greeting")
+    public Greeting greeting() {
+        return new Greeting(1l, "Hola mundo");
+    }
+}

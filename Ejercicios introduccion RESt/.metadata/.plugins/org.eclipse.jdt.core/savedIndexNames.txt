@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\lbenitez\Desktop\2 DAM\AD\LUCIA\Ejercicios introduccion RESt\.metadata\.plugins\org.eclipse.jdt.core
+1775132847.index

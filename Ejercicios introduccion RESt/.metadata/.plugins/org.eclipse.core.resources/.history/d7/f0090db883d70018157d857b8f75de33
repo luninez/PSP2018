@@ -1,0 +1,5 @@
+package com.lbenitez.rest.controller;
+
+public class GreetingController {
+
+}

@@ -1,0 +1,5 @@
+package com.lbenitez.rest.model;
+
+public class Book {
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.lbenitez.rest.clases.Gretting&apos; to &apos;Greeting&apos;&#x0D;&#x0A;- Original project: &apos;primerProyectoREST&apos;&#x0D;&#x0A;- Original element: &apos;com.lbenitez.rest.clases.Gretting&apos;&#x0D;&#x0A;- Renamed element: &apos;com.lbenitez.rest.clases.Greeting&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Gretting&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.lbenitez.rest.clases{Gretting.java[Gretting" matchStrategy="1" name="Greeting" qualified="false" references="true" similarDeclarations="false" stamp="1540382036185" textual="false" version="1.0"/>
+</session>
