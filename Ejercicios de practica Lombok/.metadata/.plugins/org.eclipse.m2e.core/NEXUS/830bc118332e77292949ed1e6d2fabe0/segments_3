@@ -1,4 +1,0 @@
-import { parseOffset } from '../../src/modifiers/offset';
-
-const popperOffsets = {
-  top
