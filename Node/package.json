@@ -1,0 +1,12 @@
+{
+  "name": "proyecto",
+  "version": "1.0.0",
+  "description": "Este es un proyecto de ejemplo",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodejs app.js",
+    "debug": "node --inspect-brk app.js"
+  },
+  "author": "Lucia",
+  "license": "ISC"
+}
