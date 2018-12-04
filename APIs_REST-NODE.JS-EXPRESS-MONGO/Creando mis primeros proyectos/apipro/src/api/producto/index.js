@@ -22,7 +22,7 @@ const { nombre, precio, descripcion, imagen } = schema.tree
  * @apiError 404 Producto not found.
  */
 router.post('/',
-  // master(), -- esto es para recibir la autenticación por la master-key
+  // master(), // esto es para recibir la autenticación por la master-key
   token({required: true, roles: 'admin'}),
   body({ nombre, precio, descripcion, imagen }),
   create)

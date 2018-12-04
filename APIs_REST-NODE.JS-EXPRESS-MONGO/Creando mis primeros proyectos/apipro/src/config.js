@@ -39,7 +39,8 @@ const config = {
   test: { },
   development: {
     mongo: {
-      uri: 'mongodb://localhost/apiproductos-dev',
+      // uri: 'mongodb://localhost/apiproductos-dev',
+      uri: 'mongodb://<lucia>:<lucia123>@ds054118.mlab.com:54118/examendb',
       options: {
         debug: true
       }
