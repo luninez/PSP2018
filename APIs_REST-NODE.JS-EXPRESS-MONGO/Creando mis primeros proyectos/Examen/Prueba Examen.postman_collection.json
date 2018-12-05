@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "27e8c29c-15a9-4efa-bd67-e8054f1354b2",
+		"name": "Prueba Examen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear nuevo usuario station",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"{{email_station}}\",\n\t\"password\": \"{{password_station}}\",\n\t\"name\":\"station\",\n\t\"picture\":\" \",\n\t\"role\": \"station\"\n}"
+				},
+				"url": {
+					"raw": "{{baseURL}}/users?access_token={{master}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{master}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear nuevo usuario admin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"admin@admin.com\",\n\t\"password\":\"admin1234\",\n\t\"name\":\"admin\",\n\t\"picture\":\" \",\n\t\"role\":\"admin\"\n}"
+				},
+				"url": {
+					"raw": "{{baseURL}}/users?access_token={{master}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{master}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear nuevo usuario user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"{{email_user}}\",\n\t\"password\": \"{{password_user}}\",\n\t\"name\":\"user\",\n\t\"picture\":\" \",\n\t\"role\": \"user\"\n}"
+				},
+				"url": {
+					"raw": "{{baseURL}}/users?access_token={{master}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{master}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear estacion",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nombre\":\"colegio\",\n\t\"latitud\": \"31.3163339\",\n\t\"longitud\":\"-6.0161164.15\",\n\t\"caracteristicas\":\"Todo tipo de sensores\",\n\t\"ubicacion\": \"Sevilla SE\"\n}"
+				},
+				"url": {
+					"raw": "{{baseURL}}/estacions?access_token={{token_admin}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"estacions"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{token_admin}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Dato-meteo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"lluvia\":\"colegio\",\n\t\"viento\": \"31.3163339\",\n\t\"humedad\":\"-6.0161164.15\",\n\t\"temperatura\":\"Todo tipo de sensores\",\n\t\"numEst\": \"Sevilla SE\"\n}"
+				},
+				"url": {
+					"raw": "{{baseURL}}/dato-meteorologicos?acces_token={{token_admin}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"dato-meteorologicos"
+					],
+					"query": [
+						{
+							"key": "acces_token",
+							"value": "{{token_admin}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
