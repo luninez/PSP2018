@@ -13,7 +13,7 @@ const OpinionSchema = new mongoose.Schema({
     texto: {
         type: String
     }
-})
+});
 
 const Opinion = new mongoose.model('Opinion', OpinionSchema);
 
@@ -23,7 +23,7 @@ const PersonaSchema = new mongoose.Schema({
         type: String,
         uppercase: true,
         required: true,
-        triem: true
+        trim: true
     },
     fechaNacimiento: {
         type: Date
