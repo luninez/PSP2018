@@ -3,26 +3,38 @@ import { Opinion } from '.'
 import { rejects } from 'assert';
 
 export const create = (nuevaOpinion) => {
-    return new Promise((resolve, reject) => {
-      Publicacion.findByIdAndUpdate(body.publicacion_id, {$push:
-      {opiniones: opinion}}, (err, publicacion) => {
-        if(err){
-          return reject(err.message)
-        }
-        return resolve(opinion)
+    
+  let nuevaOpinion = new Opinion()
+  nuevaOpinion.texto = body.texto
+  nuevaOpinion.usuario_id = body.usuario_id
+
+  Opinion.create(nuevaOpinion)
+    .then((opinion) => {
+      return new Promise((resolve, reject) => {
+        Publicacion.findByIdAndUpdate(body.publicacion_id, { $push: {opiniones: opinion} }, (err, publicacion) => {
+            if (err) {
+                return reject(err.message)
+            }
+     
+            return resolve(opinion)
+        })
       })
     })
-  } 
-  .then((opinion) =>
-  opinion.view(true))
-  .then(success(res, 201))
-  .catch(next)
+    .then((opinion) => {
+      return Opinion
+        .findById(opinion._id)
+        .populate('usuario_id', 'nombre fechaNacimiento') //si ponemos -_id, evitamos que nos pinte el id por defecto
+        .exec() 
+    })
+    .then(success(res, 201))
+    .catch(next)
+}
 
-// export const create = ({ bodymen: { body } }, res, next) =>
-//   Opinion.create(body)
-//     .then((opinion) => opinion.view(true))
-//     .then(success(res, 201))
-//     .catch(next)
+/* export const create = ({ bodymen: { body } }, res, next) =>
+  Opinion.create(body)
+    .then((opinion) => opinion.view(true))
+    .then(success(res, 201))
+    .catch(next) */ 
 
 export const index = ({ querymen: { query, select, cursor } }, res, next) =>
   Opinion.count(query)

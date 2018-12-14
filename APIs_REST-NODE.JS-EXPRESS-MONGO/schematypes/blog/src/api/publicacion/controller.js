@@ -20,6 +20,9 @@ export const index = ({ querymen: { query, select, cursor } }, res, next) =>
 
 export const show = ({ params }, res, next) =>
   Publicacion.findById(params.id)
+    .populate('autor', 'nombre fechaNacimiento')
+    .populate('opiniones', 'texto') // para obtener solo una parte del obj, lo ponemos con comas y 
+    .exec()
     .then(notFound(res))
     .then((publicacion) => publicacion ? publicacion.view() : null)
     .then(success(res))
